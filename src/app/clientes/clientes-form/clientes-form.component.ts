@@ -21,7 +21,7 @@ export class ClientesFormComponent implements OnInit {
   }
 
   //Data Bind que vem do template para o componente
-  clicar(){
+  onSubmit(){
     console.log(this.cliente);
   }
 
