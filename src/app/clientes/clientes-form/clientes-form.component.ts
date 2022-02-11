@@ -12,9 +12,17 @@ export class ClientesFormComponent implements OnInit {
 
   cliente: Cliente;
 
-  constructor() { }
+  constructor() {
+    this.cliente = new Cliente();
+    
+   }
 
   ngOnInit(): void {
+  }
+
+  //Data Bind que vem do template para o componente
+  clicar(){
+    console.log(this.cliente);
   }
 
 }
