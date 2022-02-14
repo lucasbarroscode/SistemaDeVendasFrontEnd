@@ -14,7 +14,7 @@ export class ClientesFormComponent implements OnInit {
   cliente: Cliente;
 
   constructor(private service: ClientesService) {
-    this.cliente = service.getCliente();
+    this.cliente = new Cliente();
     
    }
 
@@ -23,7 +23,9 @@ export class ClientesFormComponent implements OnInit {
 
   //Data Bind que vem do template para o componente
   onSubmit(){
-    console.log(this.cliente);
+    this.service.salvar(this.cliente).subscribe(response => {
+      console.log(response);
+    })
   }
 
 }
