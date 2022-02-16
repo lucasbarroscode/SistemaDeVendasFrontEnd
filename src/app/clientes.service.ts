@@ -18,12 +18,18 @@ export class ClientesService {
     
   }
 
-  getCliente() : Cliente{
-    let cliente: Cliente = new Cliente();
+  /*
+  getClientes() : Observable<Cliente[]>{
+    return null;
+  }
+  */
+
+  getClientes(): Cliente[]{
+    let cliente = new Cliente();
+    cliente.id = 1;
     cliente.nome = 'Fulano';
-    cliente.cpf = '0101';
-    return cliente;
-
-
+    cliente.dataCadastro = '16/08/2022';
+    cliente.cpf='12345678900';
+    return [cliente];
   }
 }
