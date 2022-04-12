@@ -39,7 +39,7 @@ export class ClientesFormComponent implements OnInit {
   }
 
   voltarParaListagem() {
-    this.router.navigate(['/clientes-lista']);
+    this.router.navigate(['/clientes/lista']);
   }
 
   //Data Bind que vem do template para o componente
