@@ -17,7 +17,9 @@ export class AuthService {
   constructor (private http: HttpClient) { }
 
   salvar(usuario : Usuario) : Observable<any>{
+    console.log(this.apiUrl, usuario);
     return this.http.post<any>(this.apiUrl, usuario);
+    
   }
 
   tentarLogar(username:string, password:string): Observable<any>{
