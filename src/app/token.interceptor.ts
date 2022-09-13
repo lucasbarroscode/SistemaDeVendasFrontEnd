@@ -16,7 +16,9 @@ export class TokenInterceptor implements HttpInterceptor {
     
     const tokenString = localStorage.getItem('access_token');
 
-    if(tokenString){
+    const url = request.url;
+
+    if(tokenString && !url.endsWith('/oauth/token')){
       console.log("Tem o token");
       console.log(tokenString);
       const token = JSON.parse(tokenString);
